@@ -14,6 +14,11 @@ class GatherContentCurl extends GatherContentFunctions {
   private $defaultFilter = '';
   private $idsUsed = array();
   private $hasTitles = array();
+  private $settings = array();
+
+  public function __construct() {
+    $this->settings['project_id'] = variable_get('gathercontent_project_id');
+  }
 
   /**
    * Return parent id associated with a specific page.
